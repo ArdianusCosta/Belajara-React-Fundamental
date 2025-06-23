@@ -2,16 +2,20 @@
     {
         "title" : "Tutorial Belajar ReactJs",
         "tags" : ["React", "Frontend"],
-        "date" : "2025-06-18"
+        "date" : "2025-06-18",
+        "isNew" : true
     },
     {
         "title" : "Tutorial Belajar Laravel",
         "tags" : ["Laravel", "Backend"],
-        "date" : "2025-06-19"
+        "date" : "2025-06-19",
+        "isNew" : false
+
     },
     {
         "title" : "Tutorial Belajar NextJs",
         "tags" : ["Next", "Frontend-Backend"],
-        "date" : "2025-06-18"
+        "date" : "2025-06-18",
+        "isNew" : false
     }
 ]
