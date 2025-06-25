@@ -4,9 +4,8 @@ import Article from "../components/Article";
 import Search from "../components/Search";
 
 function Homepage() {
-  const [posts, setPosts] = useState(postsData);
   const [totalPosts, setTotalPosts] = useState(postsData.length); 
-  const [externalPosts, setExternalPosts] = useState([]);
+  const [posts, setPosts] = useState(postsData);
 
   const onSearchChange = (value) => {
     const filteredPosts = postsData.filter((item) =>
@@ -17,16 +16,6 @@ function Homepage() {
     setTotalPosts(filteredPosts.length);
   };
 
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/todos')
-      .then(response => response.json())
-      .then(json => setExternalPosts(json))
-  });
-
-  useEffect(() => {
-    console.log("ada data baru");
-  }, [posts]);
-
   return (
     <>
       <h1>Simple Blog</h1>
@@ -36,11 +25,6 @@ function Homepage() {
       ) : (
         <p>Tidak ada artikel ditemukan.</p>
       )};
-      <hr/>
-        <h2>External Posts</h2>
-        {externalPosts.map((item, index) => (
-            <div key={index}>- {item.title}</div>
-        ))}
     </>
   );
 }
